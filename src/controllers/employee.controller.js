@@ -16,3 +16,17 @@ exports.getEmployeeList = (req, res) => {
     })
 
 }
+
+// obter funcionario por Cpf
+
+exports.getEmployeeByCpf = (req, res) => {
+    console.log('Obter registro por CPF')
+
+    EmployeeModel.getEmployeeByCpf(req.params.Cpf, (err, employee) => {
+        if (err)
+            res.send(err)
+        console.log('single employee', employee)
+        res.send(employee)
+
+    })
+}

@@ -35,4 +35,21 @@ Employee.getAllEmployees = (result) => {
 
 }
 
+// obter funcionario por n CPF
+
+Employee.getEmployeeByCpf = (Cpf, result) => {
+
+    dbConn.query('SELECT * FROM employees WHERE Cpf=?', Cpf, (err, res) => {
+
+        if (err) {
+            console.log('Erro ao obter registro por CPF', err)
+            result(null, err)
+        } else {
+            result(null, res)
+        }
+
+    })
+
+}
+
 module.exports = Employee
