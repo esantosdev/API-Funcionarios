@@ -20,7 +20,7 @@ exports.getEmployeeList = (req, res) => {
 // obter funcionario por Cpf
 
 exports.getEmployeeByCpf = (req, res) => {
-    console.log('Obter registro por CPF')
+    //console.log('Obter registro por CPF')
 
     EmployeeModel.getEmployeeByCpf(req.params.Cpf, (err, employee) => {
         if (err)
@@ -29,4 +29,10 @@ exports.getEmployeeByCpf = (req, res) => {
         res.send(employee)
 
     })
+}
+
+// criar novo registro de funcionario
+
+exports.createNewEmployee = (req, res) => {
+    console.log('Criar novo funcionario')
 }

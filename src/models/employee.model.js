@@ -4,8 +4,7 @@ var dbConn = require('../../config/db.config')
 var Employee = (employee) => {
 
 
-    this.first_name = employee.first_name
-    this.last_name = employee.last_name
+    this.Nome = employee.Nome
     this.email = employee.email
     this.phone = employee.phone
     this.organization = employee.organization
