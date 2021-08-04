@@ -35,4 +35,11 @@ exports.getEmployeeByCpf = (req, res) => {
 
 exports.createNewEmployee = (req, res) => {
     console.log('req data', req.body)
+        // checar valores nulos
+    if (req.body.contructor == Object && Object(req.body).length === 0) {
+        res.send(400).send({ success: false, message: 'Por favor, preencha todos os campos' })
+    } else {
+        console.log('dados validos')
+    }
+
 }
