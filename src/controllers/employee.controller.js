@@ -1,45 +1,65 @@
-const EmployeeModel = require('../models/employee.model')
+const EmployeeModel = require('../models/employee.model');
 
-// lista de funcionarios
-
+// Lista de todos funcionarios
 exports.getEmployeeList = (req, res) => {
 
-    console.log('Aqui esta a lista de funcionarios')
-
     EmployeeModel.getAllEmployees((err, employees) => {
-        console.log('Aqui esta')
+        console.log('Lista de todos funcionarios');
         if (err)
-            res.send(err)
-        console.log('Employees', employees)
+            res.send(err);
+        console.log('Funcionarios', employees);
         res.send(employees)
-
     })
-
 }
 
-// obter funcionario por Cpf
-
+// Retornando por CPF
 exports.getEmployeeByCpf = (req, res) => {
-    //console.log('Obter registro por CPF')
-
+    //console.log('retornando por CPF');
     EmployeeModel.getEmployeeByCpf(req.params.Cpf, (err, employee) => {
         if (err)
-            res.send(err)
-        console.log('single employee', employee)
-        res.send(employee)
-
+            res.send(err);
+        console.log('registro especifico', employee);
+        res.send(employee);
     })
 }
 
-// criar novo registro de funcionario
-
+// criar novo registro
 exports.createNewEmployee = (req, res) => {
-    console.log('req data', req.body)
-        // checar valores nulos
-    if (req.body.contructor == Object && Object(req.body).length === 0) {
-        res.send(400).send({ success: false, message: 'Por favor, preencha todos os campos' })
+    const employeeReqData = new EmployeeModel(req.body);
+    console.log('employeeReqData', employeeReqData);
+    // check null
+    if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
+        res.send(400).send({ success: false, message: 'Por favor, preencha todos os campos' });
     } else {
-        console.log('dados validos')
+        EmployeeModel.createEmployee(employeeReqData, (err, employee) => {
+            if (err)
+                res.send(err);
+            res.json({ status: true, message: 'Registrado com sucesso', data: employee.insertCpf })
+        })
     }
+}
 
+// atualizar registro
+exports.updateEmployee = (req, res) => {
+    const employeeReqData = new EmployeeModel(req.body);
+    console.log('employeeReqData update', employeeReqData);
+    // check null
+    if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
+        res.send(400).send({ success: false, message: 'Por favor, preencha todos os campos' });
+    } else {
+        EmployeeModel.updateEmployee(req.params.Cpf, employeeReqData, (err, employee) => {
+            if (err)
+                res.send(err);
+            res.json({ status: true, message: 'Registro atualizado com sucesso!' })
+        })
+    }
+}
+
+// deletar registro
+exports.deleteEmployee = (req, res) => {
+    EmployeeModel.deleteEmployee(req.params.Cpf, (err, employee) => {
+        if (err)
+            res.send(err);
+        res.json({ success: true, message: 'Deletado com sucesso!' });
+    })
 }

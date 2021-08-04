@@ -19,9 +19,9 @@ app.get('/', (req, res) => {
 })
 
 // importar rota
-const employeeRoutes = require('./src/routes/employee.route')
+const EmployeeRoutes = require('./src/routes/employee.route')
     // criar rota
-app.use('/api/v1/employee', employeeRoutes)
+app.use('/api/v1/employee', EmployeeRoutes)
     //porta
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`)

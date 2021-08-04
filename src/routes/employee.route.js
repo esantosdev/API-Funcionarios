@@ -1,19 +1,21 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
-const EmployeeController = require('../controllers/employee.controller')
+const employeeController = require('../controllers/employee.controller');
 
-//obter lista com todos funcionarios
+// Listar todos registros
+router.get('/', employeeController.getEmployeeList);
 
-router.get('/', EmployeeController.getEmployeeList)
+// Retornar via CPF
+router.get('/:Cpf', employeeController.getEmployeeByCpf);
 
+// Novo Registro
+router.post('/', employeeController.createNewEmployee);
 
-// obter registros por CPF
+// Atualizar Registro
+router.put('/:Cpf', employeeController.updateEmployee);
 
-router.get('/:Cpf', EmployeeController.getEmployeeByCpf)
+// Deletar Registro
+router.delete('/:Cpf', employeeController.deleteEmployee);
 
-// inserir novo funcionario
-
-router.post('/', EmployeeController.createNewEmployee)
-
-module.exports = router
+module.exports = router;
