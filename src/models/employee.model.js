@@ -5,14 +5,12 @@ var Employee = (employee) => {
 
 
     this.Nome = employee.Nome
-    this.email = employee.email
-    this.phone = employee.phone
-    this.organization = employee.organization
-    this.designation = employee.designation
-    this.salary = employee.salary
+    this.cargo = employee.cargo
+    this.salario = employee.salario
     this.status = employee.status ? employee.status : 1;
     this.created_at = new Date();
     this.update_at = new Date()
+    this.ufnasc = employee.ufnasc
 
 
 }

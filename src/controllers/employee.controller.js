@@ -34,5 +34,5 @@ exports.getEmployeeByCpf = (req, res) => {
 // criar novo registro de funcionario
 
 exports.createNewEmployee = (req, res) => {
-    console.log('Criar novo funcionario')
+    console.log('req data', req.body)
 }
