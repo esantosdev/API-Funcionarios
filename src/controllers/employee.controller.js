@@ -39,7 +39,10 @@ exports.createNewEmployee = (req, res) => {
     }
 }
 
-// atualizar registro
+// atualizar registro. a atualizacao e feita baseada no CPF do funcionario! 
+// ex: localhost:5000/api/v1/employee/4356789811 
+// estarei compartilhando meu workspace do postman, para que compreendam melhor
+
 exports.updateEmployee = (req, res) => {
     const employeeReqData = new EmployeeModel(req.body);
     console.log('employeeReqData update', employeeReqData);
