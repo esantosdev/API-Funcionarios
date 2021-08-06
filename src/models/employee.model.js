@@ -13,18 +13,19 @@ var Employee = function(employee) {
     this.Cpf = employee.Cpf;
 }
 
-// get all employees
+// Todos os registros
 Employee.getRegistrosGerais = (result) => {
     dbConn.query('SELECT * FROM employees', (err, res) => {
         if (err) {
-            console.log('Error while fetching employess', err);
+            console.log('Erro ao retornar registros', err);
             result(null, err);
         } else {
-            console.log('Employees fetched successfully');
+            console.log('Registros listados com sucesso');
             result(null, res);
         }
     })
 }
+
 
 // classificar por salario 
 Employee.getBySal = (result) => {

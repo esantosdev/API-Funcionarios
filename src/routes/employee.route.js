@@ -9,7 +9,8 @@ router.get('/salario', employeeController.getEmployeebySal);
 // Contagem Por UF
 router.get('/:ufnasc', employeeController.getContagemporUf);
 
-// get all employees
+
+// Registros adicionados
 router.get('/', employeeController.getRegistrosGerais);
 
 // Novo Registro

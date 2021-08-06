@@ -24,10 +24,10 @@ exports.getContagemporUf = (req, res) => {
     })
 }
 
-
+// Obter todos Registros
 exports.getRegistrosGerais = (req, res) => {
     EmployeeModel.getRegistrosGerais((err, employees) => {
-        console.log('We are here');
+        console.log('Registros adicionados');
         if (err)
             res.send(err);
         console.log('Employees', employees);
