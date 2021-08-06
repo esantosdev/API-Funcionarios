@@ -19,7 +19,7 @@ nodemon index.js
 
 A partir disto já será possível testar a API.
 
-Att
+Att.
 
 
 
