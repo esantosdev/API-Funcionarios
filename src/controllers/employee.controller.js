@@ -27,7 +27,7 @@ exports.getEmployeeByCpf = (req, res) => {
 exports.createNewEmployee = (req, res) => {
     const employeeReqData = new EmployeeModel(req.body);
     console.log('employeeReqData', employeeReqData);
-    // check null
+
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
         res.send(400).send({ success: false, message: 'Por favor, preencha todos os campos' });
     } else {
@@ -43,9 +43,9 @@ exports.createNewEmployee = (req, res) => {
 exports.updateEmployee = (req, res) => {
     const employeeReqData = new EmployeeModel(req.body);
     console.log('employeeReqData update', employeeReqData);
-    // check null
+
     if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
-        res.send(400).send({ success: false, message: 'Por favor, preencha todos os campos' });
+        console.log({ success: false, message: 'Por favor, preencha todos os campos' });
     } else {
         EmployeeModel.updateEmployee(req.params.Cpf, employeeReqData, (err, employee) => {
             if (err)
