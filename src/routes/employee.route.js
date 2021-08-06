@@ -3,11 +3,15 @@ const router = express.Router();
 
 const employeeController = require('../controllers/employee.controller');
 
-// Listar todos registros
-router.get('/', employeeController.getEmployeeList);
+// Classificador por Salario  (Maior para menor)
+router.get('/salario', employeeController.getEmployeebySal);
 
-// Retornar via CPF
+// Contagem Por UF
+router.get('/:ufnasc', employeeController.getContagemporUf);
+
+// Retornar registros por CPF
 router.get('/:Cpf', employeeController.getEmployeeByCpf);
+
 
 // Novo Registro
 router.post('/', employeeController.createNewEmployee);

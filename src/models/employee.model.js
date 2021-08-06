@@ -13,9 +13,9 @@ var Employee = function(employee) {
     this.Cpf = employee.Cpf;
 }
 
-// get all employees
-Employee.getAllEmployees = (result) => {
-    dbConn.query('SELECT * FROM employees', (err, res) => {
+// classificar por salario 
+Employee.getBySal = (result) => {
+    dbConn.query('SELECT * FROM employees ORDER BY salario DESC, ufnasc DESC ', (err, res) => {
         if (err) {
             console.log('Erro ao exibir lista', err);
             result(null, err);
@@ -26,10 +26,23 @@ Employee.getAllEmployees = (result) => {
     })
 }
 
-// Buscando registros do funcionario, Pode ser passado qualquer parametro, alem do CPF. Como por exemplo, apenas o Nome, ou o salario, ou o cargo. Na requisicao
-// nao e necessario passar somente o cpf como parametro, embora esteja nomeado obter por CPF
+// Contagem por UF
+
+Employee.getContagemporUf = (ufnasc, Nome, result) => {
+    dbConn.query(' SELECT ufnasc, COUNT (ufnasc) FROM employees GROUP BY ufnasc ', ufnasc, Nome, (err, res) => {
+        if (err) {
+            console.log('Erro ao exibir lista', err);
+            result(null, err);
+        } else {
+            console.log('Sucesso ao exibir lista');
+            result(null, res);
+        }
+    })
+}
+
+//  obter registros por CPF
 Employee.getEmployeeByCpf = (Cpf, Nome, ufnasc, cargo, salario, DataCad, status, result) => {
-    dbConn.query('SELECT Nome, Cpf, cargo, ufnasc, salario, status, DataCad FROM employees WHERE Nome OR Cpf OR ufnasc OR salario OR DataCad OR status OR cargo  = ?', Cpf, Nome, ufnasc, salario, DataCad, status, cargo, (err, res) => {
+    dbConn.query('SELECT Nome, Cpf, cargo, ufnasc, salario, status, DataCad FROM employees WHERE Cpf=?', Cpf, Nome, ufnasc, salario, DataCad, status, cargo, (err, res) => {
         if (err) {
             console.log('Erro ao buscar registros', err);
             result(null, err);
@@ -38,6 +51,7 @@ Employee.getEmployeeByCpf = (Cpf, Nome, ufnasc, cargo, salario, DataCad, status,
         }
     })
 }
+
 
 // registrando novo funcionario
 Employee.createEmployee = (employeeReqData, result) => {

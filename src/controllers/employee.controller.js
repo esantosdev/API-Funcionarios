@@ -1,27 +1,44 @@
 const EmployeeModel = require('../models/employee.model');
 
 // Lista de todos funcionarios
-exports.getEmployeeList = (req, res) => {
+exports.getEmployeebySal = (req, res) => {
 
-    EmployeeModel.getAllEmployees((err, employees) => {
-        console.log('Lista de todos funcionarios');
+    EmployeeModel.getBySal((err, employees) => {
+        console.log('Registros por valor de salario');
         if (err)
             res.send(err);
-        console.log('Funcionarios', employees);
+        console.log('Funcionarios por Salario', employees);
         res.send(employees)
     })
 }
 
-// Retornando por CPF
+// Por Uf
+exports.getContagemporUf = (req, res) => {
+
+    EmployeeModel.getContagemporUf((err, employees) => {
+        console.log('Registros por UF');
+        if (err)
+            res.send(err);
+        console.log('Funcionarios por Uf', employees);
+        res.send(employees)
+    })
+}
+
+
+
 exports.getEmployeeByCpf = (req, res) => {
-    //console.log('retornando por CPF');
+
     EmployeeModel.getEmployeeByCpf(req.params.Cpf, (err, employee) => {
         if (err)
             res.send(err);
-        console.log('registro especifico', employee);
+        console.log('Listando registros por n de CPF', employee);
         res.send(employee);
     })
 }
+
+
+
+
 
 // criar novo registro
 exports.createNewEmployee = (req, res) => {
@@ -58,7 +75,9 @@ exports.updateEmployee = (req, res) => {
     }
 }
 
-// deletar registro
+
+
+// deletar registro por n de CPF
 exports.deleteEmployee = (req, res) => {
     EmployeeModel.deleteEmployee(req.params.Cpf, (err, employee) => {
         if (err)
