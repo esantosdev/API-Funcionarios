@@ -7,7 +7,7 @@ Obs: um convite foi enviado para visualizar meu workspace do Postman e minhas co
 Link da documentação de Teste (possui 3 testes que realizei)
 https://documenter.getpostman.com/view/15654225/TzskD2gf
 
-A documentação foi Gerada via Postman
+A documentação da API foi Gerada totalmente via Postman
 
 Também foi utilizado Axios para retornar dados. Todos os testes foram concluídos com sucesso, estando a API pronta para uso e publicação.
 
