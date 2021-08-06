@@ -25,19 +25,15 @@ exports.getContagemporUf = (req, res) => {
 }
 
 
-
-exports.getEmployeeByCpf = (req, res) => {
-
-    EmployeeModel.getEmployeeByCpf(req.params.Cpf, (err, employee) => {
+exports.getRegistrosGerais = (req, res) => {
+    EmployeeModel.getRegistrosGerais((err, employees) => {
+        console.log('We are here');
         if (err)
             res.send(err);
-        console.log('Listando registros por n de CPF', employee);
-        res.send(employee);
+        console.log('Employees', employees);
+        res.send(employees)
     })
 }
-
-
-
 
 
 // criar novo registro

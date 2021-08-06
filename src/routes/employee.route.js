@@ -9,9 +9,8 @@ router.get('/salario', employeeController.getEmployeebySal);
 // Contagem Por UF
 router.get('/:ufnasc', employeeController.getContagemporUf);
 
-// Retornar registros por CPF
-router.get('/:Cpf', employeeController.getEmployeeByCpf);
-
+// get all employees
+router.get('/', employeeController.getRegistrosGerais);
 
 // Novo Registro
 router.post('/', employeeController.createNewEmployee);

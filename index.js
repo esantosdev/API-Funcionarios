@@ -6,10 +6,8 @@ const app = express()
 //definir porta do server
 const port = 5000
 
-// parse request data content type application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
-// parse request data content type application/json
 app.use(bodyParser.json())
 
 

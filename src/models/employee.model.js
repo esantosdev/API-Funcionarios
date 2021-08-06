@@ -13,6 +13,19 @@ var Employee = function(employee) {
     this.Cpf = employee.Cpf;
 }
 
+// get all employees
+Employee.getRegistrosGerais = (result) => {
+    dbConn.query('SELECT * FROM employees', (err, res) => {
+        if (err) {
+            console.log('Error while fetching employess', err);
+            result(null, err);
+        } else {
+            console.log('Employees fetched successfully');
+            result(null, res);
+        }
+    })
+}
+
 // classificar por salario 
 Employee.getBySal = (result) => {
     dbConn.query('SELECT salario, Nome FROM employees GROUP BY salario  ', (err, res) => {
@@ -35,18 +48,6 @@ Employee.getContagemporUf = (ufnasc, Nome, result) => {
             result(null, err);
         } else {
             console.log('Sucesso ao exibir lista');
-            result(null, res);
-        }
-    })
-}
-
-//  obter registros por CPF
-Employee.getEmployeeByCpf = (Cpf, Nome, ufnasc, cargo, salario, DataCad, status, result) => {
-    dbConn.query('SELECT Nome, Cpf, cargo, ufnasc, salario, status, DataCad FROM employees WHERE Cpf=?', Cpf, Nome, ufnasc, salario, DataCad, status, cargo, (err, res) => {
-        if (err) {
-            console.log('Erro ao buscar registros', err);
-            result(null, err);
-        } else {
             result(null, res);
         }
     })
