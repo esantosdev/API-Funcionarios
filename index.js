@@ -1,6 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-    //criando app express
+var axios = require('axios');
+
+//criando app express
 const app = express()
 
 //definir porta do server
@@ -24,3 +26,9 @@ app.use('/api/v1/employee', EmployeeRoutes)
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`)
 })
+
+// consumindo com axios
+
+axios.get("http://localhost:5000/api/v1/employee")
+    .then(response => console.log(response)) //output
+    .catch(error => console.log(error))

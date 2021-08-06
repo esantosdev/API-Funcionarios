@@ -36,7 +36,7 @@ exports.getRegistrosGerais = (req, res) => {
 }
 
 
-// criar novo registro
+// Criar novo registro (adicionar novo funcionario)
 exports.createNewEmployee = (req, res) => {
     const employeeReqData = new EmployeeModel(req.body);
     console.log('employeeReqData', employeeReqData);
@@ -55,6 +55,7 @@ exports.createNewEmployee = (req, res) => {
 // atualizar registro. a atualizacao e feita baseada no CPF do funcionario! 
 // ex: localhost:5000/api/v1/employee/4356789811 
 // estarei compartilhando meu workspace do postman, para que compreendam melhor
+// a atualizacao dos campos deve ser feita no form url-encoded
 
 exports.updateEmployee = (req, res) => {
     const employeeReqData = new EmployeeModel(req.body);

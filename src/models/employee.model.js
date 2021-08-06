@@ -27,7 +27,7 @@ Employee.getRegistrosGerais = (result) => {
 }
 
 
-// classificar por salario 
+// Classificar por salario 
 Employee.getBySal = (result) => {
     dbConn.query('SELECT salario, Nome FROM employees GROUP BY salario  ', (err, res) => {
         if (err) {
@@ -41,7 +41,6 @@ Employee.getBySal = (result) => {
 }
 
 // Contagem por UF
-
 Employee.getContagemporUf = (ufnasc, Nome, result) => {
     dbConn.query(' SELECT ufnasc, COUNT (ufnasc) FROM employees GROUP BY ufnasc ', ufnasc, Nome, (err, res) => {
         if (err) {
@@ -55,7 +54,7 @@ Employee.getContagemporUf = (ufnasc, Nome, result) => {
 }
 
 
-// registrando novo funcionario
+// Registrando novo funcionario
 Employee.createEmployee = (employeeReqData, result) => {
     dbConn.query('INSERT INTO employees SET ? ', employeeReqData, (err, res) => {
         if (err) {
