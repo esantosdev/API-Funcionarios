@@ -11,6 +11,16 @@ A documentação da API foi Gerada totalmente via Postman
 
 Também foi utilizado Axios para retornar dados. Todos os testes foram concluídos com sucesso, estando a API pronta para uso e publicação.
 
+SETUP 
+
+npm install
+
+nodemon index.js
+
+A partir disto já será possível testar a API.
+
+Att
+
 
 
 
