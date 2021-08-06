@@ -15,7 +15,7 @@ var Employee = function(employee) {
 
 // classificar por salario 
 Employee.getBySal = (result) => {
-    dbConn.query('SELECT * FROM employees ORDER BY salario DESC, ufnasc DESC ', (err, res) => {
+    dbConn.query('SELECT salario, Nome FROM employees GROUP BY salario  ', (err, res) => {
         if (err) {
             console.log('Erro ao exibir lista', err);
             result(null, err);
