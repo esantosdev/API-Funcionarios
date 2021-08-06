@@ -20,6 +20,7 @@ nodemon index.js
 A partir disto já será possível testar a API.
 
 Att.
+E muito obrigada.
 
 
 
