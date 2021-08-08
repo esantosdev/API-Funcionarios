@@ -29,7 +29,7 @@ Employee.getRegistrosGerais = (result) => {
 
 // Classificar por salario 
 Employee.getBySal = (result) => {
-    dbConn.query('SELECT salario, Nome FROM employees GROUP BY salario  ', (err, res) => {
+    dbConn.query('SELECT salario, Nome FROM employees ORDER BY salario DESC  ', (err, res) => {
         if (err) {
             console.log('Erro ao exibir lista', err);
             result(null, err);
