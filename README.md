@@ -3,6 +3,7 @@
 Link da Documentação da API: https://documenter.getpostman.com/view/15654225/TzskChpC
 
 Obs importantes: um convite foi enviado para visualizar meu workspace do Postman e minhas coleções. <br>
+Foi enviado ao seguinte e-mail: dante@allugator.com <br>
 O arquivo de DB (criação do banco e tabelas) está no repositório. <br>
 
 No diretório config do projeto está todo o parâmetro de configuração, sendo host: localhost user:root senha em branco e database: node_mysql_crud_db 
