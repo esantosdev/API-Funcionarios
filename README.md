@@ -19,13 +19,17 @@ Também foi utilizado Axios para retornar dados. Todos os testes foram concluíd
 
 SETUP 
 
+Preferencialmente, colar o script de DB ou importar;
+
+E então:
+
 npm install
 
 nodemon index.js
 
 A partir disto já será possível testar a API.
 
-Att.
+Att,
 E muito obrigada.
 
 
