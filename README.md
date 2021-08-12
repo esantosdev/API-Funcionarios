@@ -12,7 +12,8 @@ GET/PUT/POST/DELETE
 
 GET 
 localhost:5000/api/v1/employee
-Retorna a lista com todos  funcionários cadastrados
+Retorna a lista com todos  funcionários cadastrados <br>
+[![num1.png](https://i.postimg.cc/bvG4Xntc/num1.png)](https://postimg.cc/jWbMPLcZ)
 
 DELETE
 ex: localhost:5000/api/v1/employee/(CPF do funcionário a ser deletado)
