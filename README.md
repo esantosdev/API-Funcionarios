@@ -1,4 +1,4 @@
-Uma API RESTful para gerenciamento de funcionários (pode ser adaptada para outras situações).
+Uma API RESTful para gerenciamento de funcionários (pode ser adaptada para outras situações). <br>
 Setup mínimo: Node + MySQL + VSCode (ou outro editor) + Postman (requisições e documentação).
 
 Informações importantes <br>
@@ -19,7 +19,7 @@ ex: localhost:5000/api/v1/employee/(CPF do funcionário a ser deletado)
 
 PUT
 ex: localhost:5000/api/v1/employee/(CPF do funcionário a ter informações atualizadas)
-Indique o campo e o valor a ser atualizado, em um form urlencoded. Ex: Atualizar o funcionário com um determinado nº de CPF, alterando seu salário para 10000.00 <br>
+Indique o campo e o valor a ser atualizado, em um form urlencoded. <br> Ex: Atualizar o funcionário com um determinado nº de CPF, alterando seu salário para 10000.00 <br>
 Isso pode ser feito via Postman
 
 POST
