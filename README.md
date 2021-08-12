@@ -17,7 +17,6 @@ Retorna a lista com todos  funcionários cadastrados <br>
 
 DELETE
 ex: localhost:5000/api/v1/employee/(CPF do funcionário a ser deletado) <br>
-[![Capturarfffff.png](https://i.postimg.cc/pLS1Bd10/Capturarfffff.png)](https://postimg.cc/9DGpmc2T)
 
 PUT
 ex: localhost:5000/api/v1/employee/(CPF do funcionário a ter informações atualizadas) <br>
@@ -27,7 +26,9 @@ Isso pode ser feito via Postman
 POST
 ex: localhost:5000/api/v1/employee
 Indique os campos, assim como está escrito no DB, e os valores a adicionar. Seja para Nome, salário, Cpf, sem deixar campos em branco. <br>
-Obs: assim como a atualização, também em form urlencoded.
+Obs: assim como a atualização, também em form urlencoded. <br>
+[![Capturarfffff.png](https://i.postimg.cc/pLS1Bd10/Capturarfffff.png)](https://postimg.cc/9DGpmc2T)
+
 
 Extra <br>
 
