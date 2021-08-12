@@ -2,7 +2,7 @@ Uma API RESTful para gerenciamento de funcionários (pode ser adaptada para outr
 Setup mínimo: Node + MySQL + VSCode (ou outro editor) + Postman (requisições e documentação).
 
 Informações importantes <br>
-A documentação da API está disponível pelo link: https://documenter.getpostman.com/view/15654225/TzskChpC
+A documentação da API está disponível pelo link: https://documenter.getpostman.com/view/15654225/TzskChpC <br>
 O arquivo SQL do Banco de Dados está dentro dos arquivos no repositório. Basta importar, ou copiar o script.
 
 Funcionalidades e utilização básica
