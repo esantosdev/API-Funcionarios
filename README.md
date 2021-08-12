@@ -35,7 +35,7 @@ Indique os campos, assim como está escrito no DB, e os valores a adicionar. Sej
 
 Extra <br>
 
-GET
+GET <br>
 Exibir classificação de salários (maior para menor salário) <br>
 localhost:5000/api/v1/employee/salario <br>
 [![salario.png](https://i.postimg.cc/8zwr8JVH/salario.png)](https://postimg.cc/zybfKfvb)
