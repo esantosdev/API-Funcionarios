@@ -26,4 +26,14 @@ POST
 ex: localhost:5000/api/v1/employee
 Indique os campos, assim como está escrito no DB, e os valores a adicionar. Seja para Nome, salário, Cpf, sem deixar campos em branco.
 
+Extra <br>
+
+GET
+Exibir classificação de salários (maior para menor salário) <br>
+localhost:5000/api/v1/employee/salario <br>
+
+GET
+Contagem de quantos funcionários há por UF (Unidade Federativa) <br>
+localhost:5000/api/v1/employee/ufnasc
+
 
