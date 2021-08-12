@@ -21,7 +21,7 @@ ex: localhost:5000/api/v1/employee/(CPF do funcionário a ser deletado) <br>
 
 PUT
 ex: localhost:5000/api/v1/employee/(CPF do funcionário a ter informações atualizadas) <br>
-Indique o campo e o valor a ser atualizado, em um form urlencoded. <br> Ex: Atualizar o funcionário com um determinado nº de CPF, alterando seu salário para 10000.00 <br>
+Indique o campo e o valor a ser atualizado. <br> Ex: Atualizar o funcionário com um determinado nº de CPF, alterando seu salário para 10000.00 <br>
 Isso pode ser feito via Postman <br>
 [![Capturarggggg.png](https://i.postimg.cc/MTS5sf0Y/Capturarggggg.png)](https://postimg.cc/p9sKrT69)
 
@@ -29,7 +29,7 @@ Isso pode ser feito via Postman <br>
 POST
 ex: localhost:5000/api/v1/employee
 Indique os campos, assim como está escrito no DB, e os valores a adicionar. Seja para Nome, salário, Cpf, sem deixar campos em branco. <br>
-Obs: assim como a atualização, também em form urlencoded. <br>
+ <br>
 [![Capturarfffff.png](https://i.postimg.cc/pLS1Bd10/Capturarfffff.png)](https://postimg.cc/9DGpmc2T)
 
 
