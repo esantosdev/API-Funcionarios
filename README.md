@@ -17,12 +17,13 @@ Retorna a lista com todos  funcionários cadastrados <br>
 
 DELETE
 ex: localhost:5000/api/v1/employee/(CPF do funcionário a ser deletado) <br> 
-[![Capturarggggg.png](https://i.postimg.cc/MTS5sf0Y/Capturarggggg.png)](https://postimg.cc/p9sKrT69)
 
 PUT
 ex: localhost:5000/api/v1/employee/(CPF do funcionário a ter informações atualizadas) <br>
 Indique o campo e o valor a ser atualizado, em um form urlencoded. <br> Ex: Atualizar o funcionário com um determinado nº de CPF, alterando seu salário para 10000.00 <br>
-Isso pode ser feito via Postman
+Isso pode ser feito via Postman <br>
+[![Capturarggggg.png](https://i.postimg.cc/MTS5sf0Y/Capturarggggg.png)](https://postimg.cc/p9sKrT69)
+
 
 POST
 ex: localhost:5000/api/v1/employee
