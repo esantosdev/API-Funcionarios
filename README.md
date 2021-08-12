@@ -24,7 +24,8 @@ Isso pode ser feito via Postman
 
 POST
 ex: localhost:5000/api/v1/employee
-Indique os campos, assim como está escrito no DB, e os valores a adicionar. Seja para Nome, salário, Cpf, sem deixar campos em branco.
+Indique os campos, assim como está escrito no DB, e os valores a adicionar. Seja para Nome, salário, Cpf, sem deixar campos em branco. <br>
+Obs: assim como a atualização, também em form urlencoded.
 
 Extra <br>
 
