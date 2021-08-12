@@ -21,7 +21,7 @@ ex: localhost:5000/api/v1/employee/(CPF do funcionário a ser deletado) <br>
 
 PUT
 ex: localhost:5000/api/v1/employee/(CPF do funcionário a ter informações atualizadas) <br>
-Indique o campo e o valor a ser atualizado. <br> Ex: Atualizar o funcionário com um determinado nº de CPF, alterando seu salário para 10000.00 <br>
+Indique o campo e o valor a ser atualizado. <br> Ex: Atualizar o funcionário com um determinado nº de CPF, alterando seu salário para 10000.00. <br>
 Isso pode ser feito via Postman <br>
 [![Capturarggggg.png](https://i.postimg.cc/MTS5sf0Y/Capturarggggg.png)](https://postimg.cc/p9sKrT69)
 
@@ -38,6 +38,8 @@ Extra <br>
 GET
 Exibir classificação de salários (maior para menor salário) <br>
 localhost:5000/api/v1/employee/salario <br>
+[![salario.png](https://i.postimg.cc/8zwr8JVH/salario.png)](https://postimg.cc/zybfKfvb)
+
 
 GET
 Contagem de quantos funcionários há por UF (Unidade Federativa) <br>
