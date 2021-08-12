@@ -16,7 +16,8 @@ Retorna a lista com todos  funcionários cadastrados <br>
 [![num1.png](https://i.postimg.cc/bvG4Xntc/num1.png)](https://postimg.cc/jWbMPLcZ)
 
 DELETE
-ex: localhost:5000/api/v1/employee/(CPF do funcionário a ser deletado)
+ex: localhost:5000/api/v1/employee/(CPF do funcionário a ser deletado) <br>
+[![Capturarfffff.png](https://i.postimg.cc/pLS1Bd10/Capturarfffff.png)](https://postimg.cc/9DGpmc2T)
 
 PUT
 ex: localhost:5000/api/v1/employee/(CPF do funcionário a ter informações atualizadas) <br>
