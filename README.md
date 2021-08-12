@@ -43,6 +43,7 @@ localhost:5000/api/v1/employee/salario <br>
 
 GET
 Contagem de quantos funcionários há por UF (Unidade Federativa) <br>
-localhost:5000/api/v1/employee/ufnasc
+localhost:5000/api/v1/employee/ufnasc <br>
+[ufnasc.png](https://postimg.cc/Yjrq8Rjw)
 
 
