@@ -18,6 +18,15 @@ app.get('/', (req, res) => {
     res.send('Ola')
 })
 
+//Corrigindo erro de CORS
+app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
+
 // importar rota
 const EmployeeRoutes = require('./src/routes/employee.route')
     // criar rota
