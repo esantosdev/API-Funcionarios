@@ -3,7 +3,7 @@ const router = express.Router();
 
 const employeeController = require('../controllers/employee.controller');
 
-// Classificador por Salario  (Maior para menor)
+// Salarios
 router.get('/salario', employeeController.getEmployeebySal);
 
 // Contagem Por UF
